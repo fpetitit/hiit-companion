@@ -1,0 +1,11 @@
+node_modules/
+.expo/
+npm-debug.*
+android/app/my-release-key.keystore
+android/.gradle/
+android/app/build/
+android/build
+ios/build
+ios/protohiit1
+ios/protihiit1-tvOS
+ios/protohiit1-tvOSTests
