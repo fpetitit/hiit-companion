@@ -76,7 +76,11 @@ class Config extends React.Component {
     />
     <TouchableHighlight onPress={this._onPressButton}>
       <View pointerEvents='none'>
-        <Text>Save</Text>
+        <Button
+          backgroundColor="green"
+          buttonStyle={styles.buttons}
+          title="Enregistrer"
+        />
       </View>
     </TouchableHighlight>
   </ScrollView>;}
