@@ -4,10 +4,11 @@ import { StyleSheet, View, AsyncStorage } from 'react-native';
 import { Button, Text } from 'react-native-elements';
 import { connect } from 'react-redux';
 import { NavigationActions } from 'react-navigation';
+import I18n from 'react-native-i18n'
 
 const Welcome = ({ history, onResetTimer, goToHistoryScreen, goToTimerScreen, goToConfigScreen }) => (
     <View style={styles.container}>
-      <Text h1>Bienvenue !</Text>
+      <Text h1>{I18n.t('greeting')}</Text>
       <Button
         onPress={() => {onResetTimer(); goToTimerScreen();}}
         large
@@ -49,6 +50,18 @@ const styles = StyleSheet.create({
     width: 300,
   },
 });
+
+// Enable fallbacks if you want `en-US` and `en-GB` to fallback to `en`
+I18n.fallbacks = true
+
+I18n.translations = {
+  en: {
+    greeting: 'Hi!'
+  },
+  fr: {
+    greeting: 'Bonjour!'
+  }
+}
 
 const mapStateToProps = state => ({
 });
