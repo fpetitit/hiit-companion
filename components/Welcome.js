@@ -4,7 +4,7 @@ import { StyleSheet, View, AsyncStorage } from 'react-native';
 import { Button, Text } from 'react-native-elements';
 import { connect } from 'react-redux';
 import { NavigationActions } from 'react-navigation';
-import I18n from 'react-native-i18n'
+import I18n from 'react-native-i18n';
 
 const Welcome = ({ history, onResetTimer, goToHistoryScreen, goToTimerScreen, goToConfigScreen }) => (
     <View style={styles.container}>
@@ -13,7 +13,7 @@ const Welcome = ({ history, onResetTimer, goToHistoryScreen, goToTimerScreen, go
         onPress={() => {onResetTimer(); goToTimerScreen();}}
         large
         iconRight={{name: 'chevron-right', type: 'octicon' }}
-        title="Démarrer"
+        title={I18n.t('start')}
         buttonStyle={styles.buttons}
         backgroundColor="green"
       />
@@ -21,14 +21,14 @@ const Welcome = ({ history, onResetTimer, goToHistoryScreen, goToTimerScreen, go
         onPress={() => {goToHistoryScreen()}}
         large
         iconRight={{name: 'history', type: 'octicon' }}
-        title="Historique"
+        title={I18n.t('history')}
         buttonStyle={styles.buttons}
       />
       <Button
         onPress={() => {goToConfigScreen();}}
         large
         iconRight={{name: 'settings', type: 'octicon' }}
-        title="Paramètres"
+        title={I18n.t('parameters')}
         buttonStyle={styles.buttons}
       />
     </View>
@@ -50,18 +50,6 @@ const styles = StyleSheet.create({
     width: 300,
   },
 });
-
-// Enable fallbacks if you want `en-US` and `en-GB` to fallback to `en`
-I18n.fallbacks = true
-
-I18n.translations = {
-  en: {
-    greeting: 'Hi!'
-  },
-  fr: {
-    greeting: 'Bonjour!'
-  }
-}
 
 const mapStateToProps = state => ({
 });
