@@ -73,7 +73,11 @@ class Timer extends React.Component {
     if (timer.currentPhase === 'exercise') {
       timeToShow = timer.remainingExerciseTime;
     } else {
-      timeToShow = timer.remainingRestTime;
+      if (timer.currentPhase === 'rest') {
+        timeToShow = timer.remainingRestTime;
+      } else {
+        timeToShow = timer.restBetweenSet;
+      }
     };
     this._decrementTimer();
     return <View style={styles.container}>
