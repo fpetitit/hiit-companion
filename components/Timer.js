@@ -4,7 +4,7 @@ import { StyleSheet, View, AsyncStorage } from 'react-native';
 import { Button, Text } from 'react-native-elements';
 import { connect } from 'react-redux';
 import { NavigationActions } from 'react-navigation';
-// Import the react-native-sound module
+import * as Progress from 'react-native-progress';
 
 class Timer extends React.Component {
   constructor(props) {
@@ -79,6 +79,26 @@ class Timer extends React.Component {
         timeToShow = timer.restBetweenSet;
       }
     };
+    let progress;
+    if (timer.currentPhase === 'exercise') {
+      progress = timeToShow / config.remainingExerciseTime;
+    } else {
+      if (timer.currentPhase === 'rest') {
+        progress = timeToShow / config.remainingRestTime;
+      } else {
+        progress = timeToShow / config.restBetweenSet;
+      }
+    };
+    let pieColor;
+    if (timer.currentPhase === 'exercise') {
+      pieColor = '#5bb81d';
+    } else {
+      if (timer.currentPhase === 'rest') {
+        pieColor = '#b87a1d';
+      } else {
+        pieColor = '#1db87a';
+      }
+    };
     this._decrementTimer();
     return <View style={styles.container}>
       { timer.remainingSet === 0 && <Text>Bravo ! :-)</Text>}
@@ -91,6 +111,12 @@ class Timer extends React.Component {
       { timer.remainingSet !== 0 && <Text
         style={styles.countDownValue}
         >{timeToShow}</Text>}
+      { timer.remainingSet !== 0 && <Progress.Pie
+        color={pieColor}
+        progress={progress}
+        size={100}
+        style={styles.pie}
+      />}
       { timer.remainingSet !== 0 && <Button
         onPress={onStartTimer}
         buttonStyle={styles.buttons}
@@ -122,6 +148,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   buttons: {
+    marginBottom: 18,
+    width: 300,
+  },
+  pie: {
+    alignItems: 'center',
+    justifyContent: 'center',
     marginBottom: 18,
     width: 300,
   },
