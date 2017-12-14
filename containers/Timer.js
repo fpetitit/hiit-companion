@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import Timer from '../components/Timer'
-import { decrementTimer, startTimer, pauseTimer, addToHistory } from '../actions';
+import { decrementTimer, startTimer, continueTimer, pauseTimer, addToHistory } from '../actions';
 
 const mapStateToProps = state => {
   return {
@@ -16,6 +16,9 @@ const mapDispatchToProps = dispatch => {
     },
     onStartTimer: () => {
       dispatch(startTimer())
+    },
+    onContinueTimer: () => {
+      dispatch(continueTimer())
     },
     onPauseTimer: () => {
       dispatch(pauseTimer())

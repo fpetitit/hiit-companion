@@ -28,6 +28,12 @@ export const startTimer = () => {
   }
 }
 
+export const continueTimer = () => {
+  return {
+    type: 'TIMER_CONTINUE',
+  }
+}
+
 export const pauseTimer = () => {
   return {
     type: 'TIMER_PAUSE',

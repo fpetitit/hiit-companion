@@ -110,6 +110,12 @@ const timer = (state = initialState.timer, action) => {
         status: 'started',
       }
     }
+    case 'TIMER_CONTINUE': {
+      return {
+        ...state,
+        status: 'started',
+      }
+    }
     case 'TIMER_PAUSE': {
       return {
         ...state,

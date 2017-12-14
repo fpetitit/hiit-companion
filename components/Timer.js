@@ -64,6 +64,7 @@ class Timer extends React.Component {
       addToHistory,
       config,
       onDecrementTimer,
+      onContinueTimer,
       onPauseTimer,
       onStartTimer,
       timer,
@@ -117,13 +118,19 @@ class Timer extends React.Component {
         size={100}
         style={styles.pie}
       />}
-      { timer.remainingSet !== 0 && <Button
+      { timer.remainingSet !== 0 && timer.status === 'stopped' && <Button
         onPress={onStartTimer}
         buttonStyle={styles.buttons}
         title="Démarrer"
         backgroundColor="green"
       />}
-      { timer.remainingSet !== 0 && <Button
+      { timer.remainingSet !== 0 && timer.status === 'paused' && <Button
+        onPress={onContinueTimer}
+        buttonStyle={styles.buttons}
+        title="Reprendre"
+        backgroundColor="green"
+      />}
+      { timer.remainingSet !== 0 && timer.status === 'started' && <Button
         onPress={onPauseTimer}
         buttonStyle={styles.buttons}
         title="Pause"
@@ -137,7 +144,8 @@ Timer.propTypes = {
   config: PropTypes.object.isRequired,
   timer: PropTypes.object.isRequired,
   onDecrementTimer: PropTypes.func.isRequired,
-  onStartTimer: PropTypes.func.isRequired
+  onStartTimer: PropTypes.func.isRequired,
+  onContinueTimer: PropTypes.func.isRequired
 }
 
 const styles = StyleSheet.create({
