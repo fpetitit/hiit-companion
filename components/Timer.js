@@ -5,6 +5,7 @@ import { Button, Text } from 'react-native-elements';
 import { connect } from 'react-redux';
 import { NavigationActions } from 'react-navigation';
 import * as Progress from 'react-native-progress';
+import KeepAwake from 'react-native-keep-awake';
 
 class Timer extends React.Component {
   constructor(props) {
@@ -136,6 +137,7 @@ class Timer extends React.Component {
         title="Pause"
         iconRight={{name: 'control-pause', type: 'simple-line-icon' }}
       />}
+      <KeepAwake />
     </View>
   }
 }
