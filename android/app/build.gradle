@@ -101,8 +101,8 @@ android {
         applicationId "com.protohiit1"
         minSdkVersion 16
         targetSdkVersion 22
-        versionCode 14
-        versionName "2.1"
+        versionCode 15
+        versionName "2.2"
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
