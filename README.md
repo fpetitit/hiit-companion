@@ -2,8 +2,6 @@ HIIT Companion is an open-source project (license MIT) aiming to provide a mobil
 
 More about this method : https://en.wikipedia.org/wiki/High-intensity_interval_training
 
-The application is availble on the Play Store : https://play.google.com/store/apps/details?id=com.protohiit1
-
 It is also possible to install it directly from the sources on iOS and Android.
 
 Contacts :
