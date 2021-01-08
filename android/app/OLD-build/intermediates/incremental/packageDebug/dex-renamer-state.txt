@@ -1,0 +1,4 @@
+#Thu Jul 11 09:17:02 CEST 2019
+base.0=/Users/fpe/dev/code/hiit-companion/hiit-companion/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
+renamed.0=classes.dex
+file.0=/Users/fpe/dev/code/hiit-companion/hiit-companion/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
