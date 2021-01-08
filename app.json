@@ -1,7 +1,4 @@
 {
-  "expo": {
-    "sdkVersion": "22.0.0"
-  },
-  "name": "protohiit1",
-  "displayName": "Hiit"
+  "name": "proto-hiit-1",
+  "displayName": "proto-hiit-1"
 }

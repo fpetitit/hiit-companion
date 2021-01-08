@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "/Users/fpe/dev/code/hiit-companion/hiit-companion/android/app/build/intermediates/res/merged/debug/raw/woosh.mp3",
+        "source": "/Users/fpe/dev/code/hiit-companion/hiit-companion/android/app/src/main/res/raw/woosh.mp3"
+    },
+    {
+        "merged": "/Users/fpe/dev/code/hiit-companion/hiit-companion/android/app/build/intermediates/res/merged/debug/raw/boxing_bell.mp3",
+        "source": "/Users/fpe/dev/code/hiit-companion/hiit-companion/android/app/src/main/res/raw/boxing_bell.mp3"
+    },
+    {
+        "merged": "/Users/fpe/dev/code/hiit-companion/hiit-companion/android/app/build/intermediates/res/merged/debug/raw/tick.mp3",
+        "source": "/Users/fpe/dev/code/hiit-companion/hiit-companion/android/app/src/main/res/raw/tick.mp3"
+    },
+    {
+        "merged": "/Users/fpe/dev/code/hiit-companion/hiit-companion/android/app/build/intermediates/res/merged/debug/raw/sound0899.mp3",
+        "source": "/Users/fpe/dev/code/hiit-companion/hiit-companion/android/app/src/main/res/raw/sound0899.mp3"
+    },
+    {
+        "merged": "/Users/fpe/dev/code/hiit-companion/hiit-companion/android/app/build/intermediates/res/merged/debug/raw/bells001.wav",
+        "source": "/Users/fpe/dev/code/hiit-companion/hiit-companion/android/app/src/main/res/raw/bells001.wav"
+    }
+]
